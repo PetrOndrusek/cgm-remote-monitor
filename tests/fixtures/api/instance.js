@@ -62,6 +62,11 @@ function configure () {
         instance.app.enable('api');
 
         require('../../../lib/server/bootevent')(instance.env, language).boot(function booted (ctx) {
+
+          if (ctx.bootErrors && ctx.bootErrors.length > 0) {
+            return reject('boot errors');
+          }
+
           instance.ctx = ctx;
           instance.ctx.ddata = require('../../../lib/data/ddata')();
           instance.ctx.apiRootApp = apiRoot(instance.env, ctx);

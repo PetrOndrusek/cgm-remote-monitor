@@ -100,6 +100,7 @@ function setVersion() {
 
 function setStorage() {
   env.storageURI = readENV('STORAGE_URI') || readENV('MONGO_CONNECTION') || readENV('MONGO') || readENV('MONGOLAB_URI') || readENV('MONGODB_URI');
+  env.eventLog_collection = readENV('MONGO_EVENT_LOG_COLLECTION', 'eventLog');
   env.entries_collection = readENV('ENTRIES_COLLECTION') || readENV('MONGO_COLLECTION', 'entries');
   env.authentication_collections_prefix = readENV('MONGO_AUTHENTICATION_COLLECTIONS_PREFIX', 'auth_');
   env.treatments_collection = readENV('MONGO_TREATMENTS_COLLECTION', 'treatments');
