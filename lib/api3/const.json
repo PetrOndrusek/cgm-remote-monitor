@@ -51,5 +51,14 @@
 
   "MIN_TIMESTAMP": 946684800000,
   "MIN_UTC_OFFSET": -1440,
-  "MAX_UTC_OFFSET":  1440
+  "MAX_UTC_OFFSET":  1440,
+
+  "EVENT_TYPE": {
+    "PS_TEMPLATE": "Profile Switch Template"
+  },
+
+  "MIGRATION": {
+    "MIGRATION_APP": "Nightscout",
+    "MIGRATION_SUBJECT": "migration"
+  }
 }
